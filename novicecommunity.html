@@ -14,14 +14,29 @@
     <title>google web sign in</title>
   </head>
   <body background="https://raw.githubusercontent.com/scan-vidhaan/covibot-picture/main/Untitled%20design%20(1).jpg">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h1 class="text-white h4" style="text-align: center;"> <B>NOVICE COMMUNITY</B></h1>
+          <span class="text-muted" >Toggleable via the navbar brand.</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
    
-    <h1 style="color: aliceblue; padding-left: 40px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> <i>Google authentication </i> </h1>
+    <h1 style="color: aliceblue;  text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;padding-top: 70px;" >  <b>NOVICE COMMUNITY </b></h1>
+
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+   
     <div class="data">
     <p>Name</p>
     <p id="alert-alert-success"></p>
     <p> Profile pic</p>
-    <img src="" class="rounded-circle" height="100px" width="100px"></img>
+    <img src="" class="rounded-circle" height="100px" width="100px"></img>100
     <p>E-mail</p>
     <p id="E-mail"></p>
     <button type="button" style="btn-btn-danger" onclick="signOut();">Sign out </button>
@@ -35,8 +50,10 @@
             left: 50%;
             right: 50%;
             margin-top: -50px;
+            padding-top: 360px;
             margin-left: -50px;
-            padding-top: 300px;
+
+            align-content: center;
 
         }
     </style>
