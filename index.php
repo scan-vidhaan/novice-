@@ -1,3 +1,3 @@
 <?php
-include_once("novicecommunity.html");
+include_once("home.html");
 />
