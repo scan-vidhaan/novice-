@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="866752165817-dksqh7ed2dbtp1o3c3fp2mo105mmb1b4.apps.googleusercontent.com">
+  
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>google web sign in</title>
+  </head>
+  <style></style>
+  <body background="https://raw.githubusercontent.com/scan-vidhaan/covibot-picture/main/Untitled%20design%20(1).jpg" >
+    <nav class="navbar navbar-light  fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="register.html" style="color: antiquewhite;">Register</a>
+        <button class="navbar-toggler-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="color: antiquewhite;">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Novice Community</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                  <li><a class="dropdown-item" href="jobs.html">Jobs</a></li>
+                  <li><a class="dropdown-item" href="register.html">Register</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+               
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <h1 style="color: rgb(40, 90, 134);  text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;padding-top: 70px; font-size: 53px; color: #00003f;;" >  <b>NOVICE COMMUNITY </b></h1>
+    <h4 style="color: aliceblue;  text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;padding-top: 30px;" >  <i> “An investment in knowledge pays the best interest” </i> </h4>
+    
+      <h4 style="color: aliceblue;  text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;padding-top: 30px; padding-left: 40px;" >  <i>– Benjamin Franklin
+         </i> </h4>
+         <h4 style="color: rgb(16, 25, 34);  text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;padding-top: 30px; padding-left: 40px;" >  <i> Novice Community is a platform through which students can be  <br> hired as inturns for a skilled job on a contract basis 
+        </i> </h4>
+   
+    
+<a>
+    <div class="g-signin2" data-onsuccess="onSignIn"  href="job.html"data-theme="dark"></div>
+   
+    <div class="data">
+    <p>Name</p>
+    <p id="alert-alert-success"></p>
+    <p> Profile pic</p>
+    <img src="" class="rounded-circle" height="100px" width="100px"></img>100
+    <p>E-mail</p>
+    <p id="E-mail"></p>
+    <button type="button" style="btn-btn-danger" onclick="signOut();">Sign out </button>
+</div>
+    <style>
+        .data{
+            display: none;
+        }
+        .g-signin2{
+            position:absolute;
+            left: 50%;
+            right: 50%;
+            margin-top: -50px;
+            padding-top: 200px;
+            margin-left: -50px;
+
+            align-content: center;
+
+        }
+    </style>
+   <script>
+        function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+       $("#name").text(getName());
+       $("#E-mail").text(getemail());
+       $("#img").attr('src',getImageurl());
+       $(".data").css("display","block");
+       $(".g-signin2").css("display","none");
+
+
+
+   </script>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
